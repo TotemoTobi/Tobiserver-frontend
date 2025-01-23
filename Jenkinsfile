@@ -1,11 +1,10 @@
 pipeline {
-  agent any
-  stages {
-    stage('checkout code') {
-      steps {
-        git(url: 'https://github.com/TotemoTobi/Tobiserver-frontend', branch: 'main')
-      }
+    agent { docker { image 'python:3.13.1-alpine3.21' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'python IPpinger.py'
+            }
+        }
     }
-
-  }
 }

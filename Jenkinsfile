@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'python IPpinger.py'
+                sh 'python --version'
             }
         }
     }

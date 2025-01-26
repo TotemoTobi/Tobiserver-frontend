@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-    label 'ubuntu'
-  }
+agent { label 'ubuntu' }
     {
         docker { image 'python:3.13.1-alpine3.21' }
     }

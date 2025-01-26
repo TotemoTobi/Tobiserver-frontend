@@ -6,7 +6,7 @@ agent { label 'ubuntu' }
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
+                sh 'python IPpinger.py'
             }
         }
     }
